@@ -24,7 +24,7 @@ class Profile extends StatelessWidget {
               context.pushNamed('editProfile');
               // context.goNamed('editProfile');
             },
-            child: const Text('Edit Profile'),
+            child: const Text('Go to Edit Profile'),
           ),
         ],
       ),

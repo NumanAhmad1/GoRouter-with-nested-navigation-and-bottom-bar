@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:go_router_navigation/routes/routes.dart';
+import 'package:go_router_navigation/screens/profile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,13 +12,19 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Home"),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Text(
+          const Text(
             "Home Screen",
             style: TextStyle(
               fontSize: 45,
             ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.push("/details");
+            },
+            child: const Text("Push to Details Screen"),
           ),
         ],
       ),
